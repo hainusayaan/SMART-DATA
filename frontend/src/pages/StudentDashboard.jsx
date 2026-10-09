@@ -40,10 +40,12 @@ function branchForDepartment(department) {
 }
 
 function StudentDashboard({ onLogout }) {
-  const { students, loadError, loading } = useBackendStudents(initialStudents);
+  const { students, setStudents, loadError, loading, loadStudentProfile } =
+    useBackendStudents(initialStudents);
   const [rollNumberQuery, setRollNumberQuery] = useState("");
   const [selectedRollNumber, setSelectedRollNumber] = useState("");
   const [rollLookupError, setRollLookupError] = useState("");
+  const [profileLoading, setProfileLoading] = useState(false);
   const student =
     students.find(
       (item) =>
@@ -73,7 +75,7 @@ function StudentDashboard({ onLogout }) {
     }
   }, [student]);
 
-  function findStudentByRollNumber(event) {
+  async function findStudentByRollNumber(event) {
     event.preventDefault();
     const query = rollNumberQuery.trim().toLowerCase();
     const match = students.find(
@@ -85,8 +87,29 @@ function StudentDashboard({ onLogout }) {
       return;
     }
 
-    setSelectedRollNumber(match.rollNumber);
+    setProfileLoading(true);
     setRollLookupError("");
+    try {
+      if (loadError) {
+        setSelectedRollNumber(match.rollNumber);
+        return;
+      }
+      const profile = await loadStudentProfile(match.rollNumber);
+      setStudents((currentStudents) =>
+        currentStudents.map((student) =>
+          student.rollNumber === profile.rollNumber ? profile : student
+        )
+      );
+      setSelectedRollNumber(profile.rollNumber);
+    } catch (error) {
+      setRollLookupError(
+        error instanceof Error
+          ? `Could not load this student's details. ${error.message}`
+          : "Could not load this student's details. Please try again."
+      );
+    } finally {
+      setProfileLoading(false);
+    }
   }
 
   if (!student) {
@@ -117,8 +140,12 @@ function StudentDashboard({ onLogout }) {
                   autoComplete="off"
                   required
                 />
-                <button type="submit" disabled={loading}>
-                  {loading ? "Loading students..." : "View My Details"}
+                <button type="submit" disabled={loading || profileLoading}>
+                  {loading
+                    ? "Loading students..."
+                    : profileLoading
+                      ? "Loading profile..."
+                      : "View My Details"}
                 </button>
               </div>
               {rollLookupError && (
