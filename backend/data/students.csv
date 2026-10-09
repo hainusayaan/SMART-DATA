@@ -1,0 +1,61 @@
+student_id,name,email,department,year,attendance_pct,cgpa,backlogs,internal_marks_avg,logins_per_week,assignments_submitted_pct,time_spent_hours,quiz_avg,clubs_count,events_attended,volunteering_hours,internships,placement_status,company,package_lpa,mock_interview_score,skills
+23KE1A0501,Harsha Patel,harsha.patel@campus.edu,CSE,1,78.1,7.47,0,76.6,4.6,56.1,7.8,76.1,2,4,10.6,0,Not Started,,,74.9,React:Beginner;Cloud Computing:Intermediate;Communication:Advanced
+22KE1A0102,Deepika Kumar,deepika.kumar@campus.edu,CIVIL,2,70.6,7.14,0,67.2,7.0,82.8,7.2,63.7,2,3,14.9,0,Not Started,,,69.0,Communication:Advanced;SQL:Advanced;Data Structures:Intermediate
+23KE1A0503,Harsha Goud,harsha.goud@campus.edu,CSE,1,80.5,5.76,0,51.0,7.0,67.7,2.4,59.0,1,5,6.5,0,Not Started,,,58.6,SQL:Beginner;Java:Intermediate;React:Intermediate
+21KE1A0504,Lakshmi Raju,lakshmi.raju@campus.edu,CSE,3,84.1,9.03,0,75.2,9.3,100,10.4,100,1,5,30.7,0,Not Started,,,100,Data Structures:Advanced;Java:Advanced;React:Advanced;Machine Learning:Advanced;Git:Intermediate
+23KE1A1205,Priya Prasad,priya.prasad@campus.edu,IT,1,78.4,7.34,0,65.7,4.5,64.9,7.8,64.4,1,0,6.2,0,Not Started,,,72.5,Cloud Computing:Beginner;Data Structures:Intermediate;Machine Learning:Intermediate
+23KE1A0106,Charan Sharma,charan.sharma@campus.edu,CIVIL,1,61.4,5.99,2,52.0,3.3,54.8,1.3,46.0,0,2,4.2,0,Not Started,,,60.1,Cloud Computing:Beginner
+21KE1A0407,Tarun Raju,tarun.raju@campus.edu,ECE,3,88.2,8.64,0,77.1,10.9,100,10.5,92.3,0,5,19.2,0,In Process,,,80.5,Cloud Computing:Intermediate;Communication:Advanced;React:Advanced;Data Structures:Advanced;Machine Learning:Advanced
+23KE1A0408,Kiran Naidu,kiran.naidu@campus.edu,ECE,1,89.4,7.97,0,74.3,8.3,100,9.1,79.5,2,8,21.4,0,Not Started,,,95.3,Excel:Advanced;React:Intermediate;Java:Advanced;Machine Learning:Advanced;Data Structures:Intermediate
+20KE1A0409,Ravi Patel,ravi.patel@campus.edu,ECE,4,68.5,7.37,1,71.6,4.8,63.2,9.0,75.5,1,3,16.1,1,Placed,Infosys,8.2,79.9,Cloud Computing:Advanced;SQL:Advanced;Python:Beginner
+22KE1A1210,Sai Babu,sai.babu@campus.edu,IT,2,66.1,7.32,0,68.0,6.1,75.6,2.5,81.8,1,2,8.2,0,Not Started,,,56.7,Cloud Computing:Beginner;Excel:Intermediate;Java:Beginner
+21KE1A0511,Venkat Varma,venkat.varma@campus.edu,CSE,3,85.9,7.49,0,62.8,9.5,100,8.9,56.3,2,7,21.3,2,Not Started,,,95.7,Git:Advanced;React:Advanced;Python:Advanced;Data Structures:Intermediate;Excel:Advanced
+21KE1A0212,Charan Patel,charan.patel@campus.edu,EEE,3,83.5,7.2,0,66.6,5.4,65.7,4.2,77.1,2,2,12.3,0,In Process,,,78.7,Data Structures:Advanced;Java:Advanced;Excel:Intermediate
+21KE1A0113,Meghana Varma,meghana.varma@campus.edu,CIVIL,3,87.4,8.88,0,87.2,8.2,100,6.9,89.5,3,6,27.1,1,Not Started,,,83.3,Data Structures:Advanced;Python:Intermediate;SQL:Intermediate;Machine Learning:Advanced;React:Intermediate
+20KE1A0314,Pooja Patel,pooja.patel@campus.edu,MECH,4,93.5,9.52,0,93.0,10.4,100,7.6,97.6,1,7,23.3,0,In Process,,,100,Machine Learning:Advanced;React:Advanced;Cloud Computing:Intermediate;Git:Intermediate;Python:Intermediate
+22KE1A0115,Venkat Reddy,venkat.reddy@campus.edu,CIVIL,2,67.5,5.5,2,44.0,2.5,53.1,7.5,64.7,2,3,3.1,0,Not Started,,,60.4,Data Structures:Beginner
+22KE1A0216,Mahesh Yadav,mahesh.yadav@campus.edu,EEE,2,88.3,6.22,0,58.6,4.9,84.6,4.3,45.2,1,4,17.0,0,Not Started,,,68.5,Git:Beginner;Data Structures:Advanced;Python:Intermediate
+23KE1A0217,Vamsi Naidu,vamsi.naidu@campus.edu,EEE,1,55.7,5.46,4,51.3,4.4,77.8,4.0,39.2,0,2,0,0,Not Started,,,52.0,Machine Learning:Intermediate
+21KE1A0318,Anjali Raju,anjali.raju@campus.edu,MECH,3,72.9,7.48,0,65.3,5.1,72.8,5.0,65.0,1,2,5.1,0,In Process,,,80.1,Git:Intermediate;Machine Learning:Intermediate;Excel:Advanced
+20KE1A0119,Meghana Yadav,meghana.yadav@campus.edu,CIVIL,4,94.2,8.91,0,90.9,8.1,98.3,10.4,73.9,2,5,20.6,1,In Process,,,100,Excel:Advanced;Communication:Advanced;React:Advanced;Machine Learning:Intermediate;Cloud Computing:Intermediate
+23KE1A0520,Sandeep Raju,sandeep.raju@campus.edu,CSE,1,64.1,6.29,4,54.5,5.1,57.3,5.3,52.7,1,0,18.2,0,Not Started,,,53.8,Excel:Intermediate
+20KE1A0221,Anjali Chowdary,anjali.chowdary@campus.edu,EEE,4,89.2,8.61,0,73.2,11.1,100,6.6,78.6,1,7,23.1,1,Placed,Wipro,5.1,100,Communication:Advanced;Java:Advanced;React:Advanced;Python:Advanced;Excel:Intermediate
+23KE1A0322,Vamsi Patel,vamsi.patel@campus.edu,MECH,1,84.6,7.67,0,75.8,6.1,90.0,2.1,62.1,2,1,9.4,0,Not Started,,,76.6,Communication:Intermediate;Excel:Intermediate;Python:Advanced
+20KE1A0123,Meghana Naidu,meghana.naidu@campus.edu,CIVIL,4,84.9,8.65,0,83.4,8.7,100,7.0,89.9,3,6,25.9,2,Placed,KPMG,7.0,100,Communication:Advanced;Data Structures:Intermediate;Git:Intermediate;Java:Advanced;Python:Intermediate
+23KE1A0524,Divya Naidu,divya.naidu@campus.edu,CSE,1,62.4,5.5,2,37.8,4.1,66.3,7.7,64.8,0,2,0.1,0,Not Started,,,67.0,SQL:Beginner
+20KE1A0225,Bhavana Goud,bhavana.goud@campus.edu,EEE,4,55.5,5.61,2,44.8,5.9,68.8,6.1,59.5,0,6,23.3,0,Not Started,,,44.1,Machine Learning:Beginner
+20KE1A0526,Deepika Babu,deepika.babu@campus.edu,CSE,4,87.8,6.52,0,57.5,8.4,72.2,3.9,60.1,0,3,26.9,0,Placed,Cognizant,6.9,71.7,React:Intermediate;SQL:Beginner;Data Structures:Intermediate
+20KE1A0427,Naveen Raju,naveen.raju@campus.edu,ECE,4,83.3,8.81,0,76.9,11.6,93.9,12.5,83.2,1,11,21.2,2,Placed,Accenture,10.8,100,Excel:Intermediate;Git:Advanced;Python:Intermediate;Cloud Computing:Advanced;Java:Advanced
+21KE1A0428,Mahesh Rao,mahesh.rao@campus.edu,ECE,3,76.8,7.15,0,63.5,7.1,73.4,4.3,67.6,0,3,7.6,0,Not Started,,,65.4,Cloud Computing:Beginner;Data Structures:Intermediate;SQL:Beginner
+22KE1A0429,Lakshmi Patel,lakshmi.patel@campus.edu,ECE,2,96.9,8.99,0,85.6,9.4,100,8.0,87.0,1,8,20.5,0,Not Started,,,94.1,Python:Advanced;Data Structures:Advanced;Excel:Intermediate;Git:Intermediate;Communication:Intermediate
+21KE1A0530,Vamsi Naidu,vamsi.naidu@campus.edu,CSE,3,69.5,5.98,2,54.1,4.2,45.3,5.4,53.1,0,1,4.9,0,Not Started,,,60.3,React:Intermediate
+22KE1A1231,Sai Rao,sai.rao@campus.edu,IT,2,88.4,8.62,0,83.3,7.1,100,8.6,88.8,1,3,8.3,0,Not Started,,,100,Data Structures:Intermediate;React:Intermediate;Communication:Advanced;Python:Intermediate;Git:Intermediate
+21KE1A0232,Deepika Chowdary,deepika.chowdary@campus.edu,EEE,3,80.2,8.31,0,73.5,6.8,100,8.2,76.8,2,8,22.1,1,In Process,,,100,Git:Intermediate;Python:Advanced;Data Structures:Advanced;Excel:Advanced;Cloud Computing:Intermediate
+23KE1A0233,Manasa Raju,manasa.raju@campus.edu,EEE,1,72.8,6.83,0,64.7,7.9,67.6,8.7,60.7,3,4,3.2,0,Not Started,,,65.0,Machine Learning:Advanced;SQL:Beginner;Communication:Advanced
+20KE1A0234,Meghana Rao,meghana.rao@campus.edu,EEE,4,79.7,8.52,0,81.7,7.4,100,10.5,84.2,2,7,26.7,0,In Process,,,100,Data Structures:Intermediate;Cloud Computing:Intermediate;Python:Intermediate;Git:Advanced;React:Intermediate
+20KE1A0135,Mahesh Sharma,mahesh.sharma@campus.edu,CIVIL,4,86.3,8.1,0,80.4,7.3,100,7.9,79.2,2,8,19.9,1,Not Started,,,100,Cloud Computing:Advanced;Data Structures:Advanced;Python:Intermediate;Java:Advanced;Machine Learning:Advanced
+20KE1A0236,Lakshmi Raju,lakshmi.raju@campus.edu,EEE,4,73.5,4.37,2,29.2,3.0,51.8,4.1,38.4,0,0,10.5,0,In Process,,,43.5,Excel:Beginner
+21KE1A0537,Teja Goud,teja.goud@campus.edu,CSE,3,55.2,5.62,4,52.7,4.8,55.5,7.6,37.9,2,3,6.4,1,In Process,,,51.1,Cloud Computing:Intermediate
+20KE1A0338,Charan Chowdary,charan.chowdary@campus.edu,MECH,4,95.7,8.89,0,71.8,13.6,88.5,9.0,77.4,3,8,26.0,0,Placed,TCS,6.6,96.1,Machine Learning:Advanced;Communication:Intermediate;Java:Intermediate;SQL:Intermediate;Data Structures:Intermediate
+22KE1A0239,Meghana Chowdary,meghana.chowdary@campus.edu,EEE,2,66.2,5.84,3,50.9,1.8,58.7,5.8,50.0,0,4,24.7,0,Not Started,,,67.9,Git:Intermediate
+21KE1A1240,Sandeep Varma,sandeep.varma@campus.edu,IT,3,55.8,5.54,4,51.1,3.4,43.2,2.9,59.1,0,5,5.9,0,Not Started,,,70.3,Python:Intermediate
+21KE1A1241,Priya Kumar,priya.kumar@campus.edu,IT,3,73.7,6.65,1,66.6,4.4,76.7,3.0,65.9,1,3,10.9,1,In Process,,,72.0,Java:Intermediate;SQL:Advanced;Data Structures:Intermediate
+21KE1A0342,Harsha Raju,harsha.raju@campus.edu,MECH,3,83.5,7.16,0,70.7,6.9,83.2,5.7,78.5,0,3,13.1,1,Not Started,,,66.4,Communication:Beginner;Cloud Computing:Intermediate;Machine Learning:Beginner
+21KE1A0343,Divya Prasad,divya.prasad@campus.edu,MECH,3,82.0,6.89,1,67.2,4.9,75.2,6.4,73.6,0,5,9.6,2,Not Started,,,83.7,Data Structures:Beginner;Communication:Beginner;SQL:Beginner
+22KE1A0244,Manasa Sharma,manasa.sharma@campus.edu,EEE,2,80.9,6.81,1,71.1,3.8,60.6,7.6,69.7,2,5,17.9,0,Not Started,,,50.3,Python:Intermediate;Machine Learning:Intermediate;React:Beginner
+23KE1A0145,Anjali Naidu,anjali.naidu@campus.edu,CIVIL,1,85.0,6.78,0,66.5,5.2,78.9,8.8,75.6,0,4,5.7,0,Not Started,,,62.4,Python:Beginner;Git:Beginner;Machine Learning:Advanced
+22KE1A1246,Sai Rao,sai.rao@campus.edu,IT,2,71.3,7.84,0,71.1,8.6,70.1,11.7,85.4,1,4,8.8,0,Not Started,,,79.3,Machine Learning:Beginner;React:Beginner;Git:Intermediate
+20KE1A0347,Lakshmi Varma,lakshmi.varma@campus.edu,MECH,4,94.0,8.81,0,91.3,7.7,100,7.6,86.8,1,4,29.9,0,Placed,Amazon,12.4,99.5,Communication:Intermediate;SQL:Intermediate;Excel:Advanced;Machine Learning:Intermediate;React:Intermediate
+21KE1A0248,Teja Chowdary,teja.chowdary@campus.edu,EEE,3,55.5,5.3,4,53.4,5.9,64.1,5.7,40.7,1,0,9.4,1,Not Started,,,56.5,Communication:Beginner
+21KE1A0149,Deepika Raju,deepika.raju@campus.edu,CIVIL,3,96.8,8.38,0,76.7,8.4,100,10.8,85.2,2,4,21.9,1,Not Started,,,100,Communication:Intermediate;Machine Learning:Advanced;Git:Advanced;Excel:Advanced;Cloud Computing:Intermediate
+22KE1A1250,Swathi Patel,swathi.patel@campus.edu,IT,2,78.5,7.44,1,67.4,4.3,87.5,2.8,64.8,3,0,17.1,0,Not Started,,,60.0,Cloud Computing:Beginner;Python:Beginner;Data Structures:Intermediate
+23KE1A1251,Tarun Reddy,tarun.reddy@campus.edu,IT,1,67.1,4.94,2,48.7,3.4,53.5,0,54.6,1,0,13.7,0,Not Started,,,60.7,Machine Learning:Beginner
+22KE1A1252,Bhavana Goud,bhavana.goud@campus.edu,IT,2,64.4,5.46,4,48.1,3.1,45.2,2.5,53.9,0,1,1.6,0,Not Started,,,59.2,Git:Intermediate
+23KE1A0553,Manasa Sharma,manasa.sharma@campus.edu,CSE,1,92.0,9.4,0,88.2,8.1,100,7.4,97.9,3,5,21.8,0,Not Started,,,96.5,Cloud Computing:Intermediate;Machine Learning:Advanced;SQL:Intermediate;React:Advanced;Git:Intermediate
+20KE1A0354,Meghana Naidu,meghana.naidu@campus.edu,MECH,4,74.8,6.88,0,71.8,7.3,76.2,6.9,55.3,2,0,25.6,1,Placed,Capgemini,12.6,75.7,Machine Learning:Beginner;React:Beginner;Git:Advanced
+22KE1A0455,Meghana Babu,meghana.babu@campus.edu,ECE,2,86.3,7.01,0,58.0,6.1,80.6,6.9,77.4,1,1,18.6,0,Not Started,,,93.5,Excel:Advanced;Git:Advanced;Cloud Computing:Advanced
+21KE1A1256,Pooja Yadav,pooja.yadav@campus.edu,IT,3,92.3,6.51,0,65.3,6.4,67.2,5.0,70.0,2,5,14.3,0,Not Started,,,91.8,SQL:Intermediate;Cloud Computing:Advanced;Communication:Advanced
+22KE1A0457,Sneha Chowdary,sneha.chowdary@campus.edu,ECE,2,74.0,5.94,0,60.9,6.0,92.0,8.6,49.4,2,2,12.4,0,Not Started,,,75.2,Excel:Intermediate;Cloud Computing:Intermediate;Java:Intermediate
+21KE1A0158,Divya Raju,divya.raju@campus.edu,CIVIL,3,80.1,6.5,0,64.3,5.1,86.2,4.8,66.0,3,0,8.9,0,Not Started,,,90.4,Data Structures:Advanced;Communication:Advanced;Java:Beginner
+20KE1A0159,Bhavana Patel,bhavana.patel@campus.edu,CIVIL,4,65.5,4.71,1,45.4,3.0,46.7,2.8,49.9,1,3,16.2,0,In Process,,,56.0,Data Structures:Beginner
+23KE1A0160,Rahul Kumar,rahul.kumar@campus.edu,CIVIL,1,78.3,6.94,0,60.4,6.5,80.2,5.0,55.9,2,2,19.8,0,Not Started,,,78.1,React:Advanced;Excel:Intermediate;Data Structures:Beginner
