@@ -2,6 +2,20 @@
 
 FastAPI + SQLAlchemy + SQLite. Predicts and tracks **Student Success** with a score, early-warning risk detection, student segments and recommendations.
 
+## Frontend
+
+The React + Vite student website is in `frontend/`. To run it locally:
+
+```bash
+cd frontend
+npm ci
+npm run dev
+```
+
+The frontend uses demo login credentials (`student` / `student123`) and sample dashboard data when the API is unavailable. The engineering learning hub includes subject lists and YouTube search links for the listed branches. API-backed data requires the backend to be deployed separately and configured for the frontend's API requests.
+
+To deploy the frontend on Vercel, import this repository. The root `vercel.json` installs and builds the frontend from `frontend/`.
+
 ## Run
 ```bash
 python -m venv venv && source venv/bin/activate      # Windows: venv\Scripts\activate
@@ -9,7 +23,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
 - Swagger UI (try every endpoint): http://localhost:8000/docs
-- First start auto-loads `data/students.csv` (60 sample students) into `database/campus.db`.
+- First start auto-loads all `data/students*.csv` files into `database/campus.db` (for example, `students.csv` plus extra batches such as `students_additional.csv`).
 - Demo login: `admin@campus.edu` / `admin123` (see `.env`).
 
 ## For the frontend
