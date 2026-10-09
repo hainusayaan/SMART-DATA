@@ -40,16 +40,96 @@ function branchForDepartment(department) {
 }
 
 function StudentDashboard({ onLogout }) {
-  const { students, loadError } = useBackendStudents(initialStudents);
-  const student = students[0] ?? initialStudents[0];
+  const { students, loadError, loading } = useBackendStudents(initialStudents);
+  const [rollNumberQuery, setRollNumberQuery] = useState("");
+  const [selectedRollNumber, setSelectedRollNumber] = useState("");
+  const [rollLookupError, setRollLookupError] = useState("");
+  const student =
+    students.find(
+      (item) =>
+        item.rollNumber.toLowerCase() === selectedRollNumber.toLowerCase()
+    ) ?? null;
   const [selectedBranch, setSelectedBranch] = useState(() =>
-    branchForDepartment(student.department)
+    branchForDepartment(student?.department ?? "CSE")
   );
   const [subjectSearch, setSubjectSearch] = useState("");
 
   useEffect(() => {
-    setSelectedBranch(branchForDepartment(student.department));
-  }, [student.department]);
+    if (
+      selectedRollNumber &&
+      students.length > 0 &&
+      !students.some(
+        (item) =>
+          item.rollNumber.toLowerCase() === selectedRollNumber.toLowerCase()
+      )
+    ) {
+      setSelectedRollNumber("");
+    }
+  }, [students, selectedRollNumber]);
+
+  useEffect(() => {
+    if (student) {
+      setSelectedBranch(branchForDepartment(student.department));
+    }
+  }, [student]);
+
+  function findStudentByRollNumber(event) {
+    event.preventDefault();
+    const query = rollNumberQuery.trim().toLowerCase();
+    const match = students.find(
+      (item) => item.rollNumber.toLowerCase() === query
+    );
+
+    if (!match) {
+      setRollLookupError(`No student was found for roll number "${rollNumberQuery.trim()}".`);
+      return;
+    }
+
+    setSelectedRollNumber(match.rollNumber);
+    setRollLookupError("");
+  }
+
+  if (!student) {
+    return (
+      <div className="dashboard">
+        <nav className="navbar">
+          <h2>Student Dashboard</h2>
+          <button onClick={onLogout}>Logout</button>
+        </nav>
+        <main className="student-dashboard">
+          {loadError && (
+            <p role="status">Backend unavailable. You can search the demo student records.</p>
+          )}
+          <section className="dashboard-section roll-lookup-section">
+            <h1>View Your Student Profile</h1>
+            <p className="roll-lookup-description">
+              Enter your student roll number to see your academic details, group, and progress.
+            </p>
+            <form className="roll-lookup-form" onSubmit={findStudentByRollNumber}>
+              <label htmlFor="student-roll-search">Student roll number</label>
+              <div className="roll-lookup-controls">
+                <input
+                  id="student-roll-search"
+                  type="search"
+                  value={rollNumberQuery}
+                  onChange={(event) => setRollNumberQuery(event.target.value)}
+                  placeholder="e.g. 24KE1A0512"
+                  autoComplete="off"
+                  required
+                />
+                <button type="submit" disabled={loading}>
+                  {loading ? "Loading students..." : "View My Details"}
+                </button>
+              </div>
+              {rollLookupError && (
+                <p className="roll-lookup-error" role="alert">{rollLookupError}</p>
+              )}
+            </form>
+          </section>
+        </main>
+      </div>
+    );
+  }
 
   const normalizedSearch = subjectSearch.trim().toLowerCase();
   const semesters = branches[selectedBranch].map((semester) => ({
@@ -105,6 +185,28 @@ function StudentDashboard({ onLogout }) {
       <div className="student-dashboard">
         {loadError && <p role="status">Backend unavailable. Showing demo data.</p>}
 
+        <section className="dashboard-section roll-lookup-section">
+          <h2>Find a Student</h2>
+          <form className="roll-lookup-form" onSubmit={findStudentByRollNumber}>
+            <label htmlFor="student-roll-search">Enter student roll number</label>
+            <div className="roll-lookup-controls">
+              <input
+                id="student-roll-search"
+                type="search"
+                value={rollNumberQuery}
+                onChange={(event) => setRollNumberQuery(event.target.value)}
+                placeholder="e.g. 24KE1A0512"
+                autoComplete="off"
+                required
+              />
+              <button type="submit">View Student</button>
+            </div>
+            {rollLookupError && (
+              <p className="roll-lookup-error" role="alert">{rollLookupError}</p>
+            )}
+          </form>
+        </section>
+
         {/* Welcome */}
 
         <div className="welcome-section">
@@ -155,16 +257,23 @@ function StudentDashboard({ onLogout }) {
             </div>
 
             <div className="profile-item">
-              <span>Semester</span>
+              <span>Academic Year</span>
               <strong>
-                {student.semester}
+                {student.year ?? Math.ceil(Number(student.semester || 1) / 2)}
               </strong>
             </div>
 
             <div className="profile-item">
-              <span>Staff Member</span>
+              <span>Class Group</span>
               <strong>
-                {student.staffMember}
+                {student.department} · Year {student.year ?? Math.ceil(Number(student.semester || 1) / 2)}
+              </strong>
+            </div>
+
+            <div className="profile-item">
+              <span>Performance Group</span>
+              <strong>
+                {student.segment || "Not assigned"}
               </strong>
             </div>
 

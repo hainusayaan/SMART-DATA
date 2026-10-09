@@ -12,9 +12,12 @@ npm ci
 npm run dev
 ```
 
-The frontend uses demo login credentials (`student` / `student123`) and sample dashboard data when the API is unavailable. The engineering learning hub includes subject lists and YouTube search links for the listed branches. API-backed data requires the backend to be deployed separately and configured for the frontend's API requests.
+The frontend uses demo login credentials (`student` / `student123`). After login, enter a student's roll number to open that student's profile, class group, progress score, and academic details. API-backed records load from all `data/students*.csv` seed files; demo dashboard records are used if the API is unavailable. The engineering learning hub includes subject lists and YouTube search links for the listed branches.
 
 To deploy the frontend on Vercel, import this repository. The root `vercel.json` installs and builds the frontend from `frontend/`.
+
+## Render deployment
+This repository includes a root-level `render.yaml` for automatic deploys on Render. Connect the GitHub repo in Render, choose the `smart-data-backend` and `smart-data-frontend` services, and keep `VITE_API_URL` set to the backend URL (for example `https://smart-data-backend.onrender.com`). Render will build and deploy on each push to the connected branch.
 
 ## Run
 ```bash

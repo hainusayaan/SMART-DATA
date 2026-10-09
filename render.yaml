@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: smart-data-backend
+    env: python
+    plan: free
+    autoDeploy: true
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /docs
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.3
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: REQUIRE_AUTH
+        value: "false"
+
+  - type: static
+    name: smart-data-frontend
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: true
+    envVars:
+      - key: VITE_API_URL
+        value: https://smart-data-backend.onrender.com

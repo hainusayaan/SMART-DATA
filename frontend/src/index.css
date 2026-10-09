@@ -647,6 +647,61 @@ th {
   margin-bottom: 20px;
 }
 
+.roll-lookup-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.roll-lookup-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.roll-lookup-controls input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.roll-lookup-controls input:focus {
+  outline: 2px solid rgba(37, 99, 235, 0.2);
+  border-color: #2563eb;
+}
+
+.roll-lookup-controls button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.roll-lookup-controls button:hover {
+  background: #1d4ed8;
+}
+
+.roll-lookup-controls button:disabled {
+  background: #94a3b8;
+  cursor: wait;
+}
+
+.roll-lookup-description {
+  margin: -8px 0 20px;
+  color: #64748b;
+}
+
+.roll-lookup-error {
+  margin-top: 10px;
+  color: #b91c1c;
+}
+
 
 /* Profile */
 
@@ -1237,6 +1292,10 @@ th {
 
   .profile-grid {
     grid-template-columns: 1fr;
+  }
+
+  .roll-lookup-controls {
+    flex-direction: column;
   }
 
   .student-cards {

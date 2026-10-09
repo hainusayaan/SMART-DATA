@@ -1,22 +1,33 @@
 import { useEffect, useState } from "react";
 
+const API_BASE = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
+
+function apiUrl(path) {
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  const endpoint = API_BASE
+    ? normalizedPath.replace(/^\/api(?=\/)/, "")
+    : normalizedPath;
+  return `${API_BASE}${endpoint}`;
+}
+
 export default function useBackendStudents(fallbackStudents) {
   const [students, setStudents] = useState(fallbackStudents);
   const [loadError, setLoadError] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let active = true;
 
     async function loadStudents() {
       try {
-        const response = await fetch("/api/students?limit=500");
+        const response = await fetch(apiUrl("/api/students?limit=500"));
         if (!response.ok) throw new Error("Could not load students");
 
         const result = await response.json();
         const profiles = await Promise.all(
           result.items.map(async (student) => {
             const profileResponse = await fetch(
-              `/api/students/${encodeURIComponent(student.student_id)}/profile`
+              apiUrl(`/api/students/${encodeURIComponent(student.student_id)}/profile`)
             );
             if (!profileResponse.ok) throw new Error("Could not load student profile");
             return profileResponse.json();
@@ -37,7 +48,8 @@ export default function useBackendStudents(fallbackStudents) {
             rollNumber: profile.student.student_id,
             name: profile.student.name,
             department: profile.student.department,
-            semester: academic.semester ?? profile.student.year,
+            year: profile.student.year,
+            semester: academic.semester,
             staffMember: "",
             cgpa: academic.cgpa ?? 0,
             internalMarks: academic.internal_marks_avg ?? 0,
@@ -68,6 +80,8 @@ export default function useBackendStudents(fallbackStudents) {
         setLoadError(false);
       } catch {
         if (active) setLoadError(true);
+      } finally {
+        if (active) setLoading(false);
       }
     }
 
@@ -77,5 +91,5 @@ export default function useBackendStudents(fallbackStudents) {
     };
   }, [fallbackStudents]);
 
-  return { students, setStudents, loadError };
+  return { students, setStudents, loadError, loading };
 }
