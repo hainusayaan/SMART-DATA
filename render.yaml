@@ -24,4 +24,4 @@ services:
     pullRequestPreviewsEnabled: true
     envVars:
       - key: VITE_API_URL
-        value: https://smart-data-backend.onrender.com
+        value: https://smart-data-backend-cpae.onrender.com
