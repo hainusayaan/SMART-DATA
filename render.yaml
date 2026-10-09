@@ -15,7 +15,7 @@ services:
       - key: REQUIRE_AUTH
         value: "false"
 
-  - type: static
+  - type: static_site
     name: smart-data-frontend
     rootDir: frontend
     buildCommand: npm ci && npm run build
